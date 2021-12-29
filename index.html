@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+    Assignment by: Zeel K Patel, 000824838
+    I, Zeel Patel, student number 000824838, certify that this material is my original work. No other person's work has been used without due acknowledgment and I have not made my work available to anyone else.
+-->
+<html>
+    <head>
+        <title>Lab 1</title>
+        <!-- A script to add bing maps api -->
+        <script type="text/javascript" src="https://www.bing.com/api/maps/mapcontrol?key=ApmM5FuE0wk9-0o9dgRGYXHcvzcYidlky-vWh922SWbFzAXFAplOJoAI5giYA4h-&callback=loadMapScenario" async="" defer=""></script>
+        <script src="lab1.js"></script>  
+        <script src="education.js"></script>
+
+        <!-- A script to add jquery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="education.css">
+    </head>
+    <body>
+        <!-- Layout of the page -->
+        <div id="container">
+            <div id="column1">
+                <input id="All" type="submit" value="All" /> <br>
+                <input id="Elementary" type="submit" value="Elementary" /> <br>
+                <input id="Middle" type="submit" value="Middle" /> <br>
+                <input id="Secondary" type="submit" value="Secondary" /> <br>
+                <input id="Post-Secondary" type="submit" value="Post-Secondary" /> <br>
+                <input id="Alternative" type="submit" value="Alternative" /> <br>
+                <input id="Adult" type="submit" value="Adult and Section 23" /> <br>
+            </div>
+
+            <div id="column2" style='width: 400px; height: 400px;'></div>
+
+            <div id="column3">
+                <div id="panel">Directions</div> <br>
+                <input id="clear" type="submit" value="Clear Directions" />
+            </div>
+        </div>
+
+        <!-- Form to add a pushpin -->
+        <form onsubmit="event.preventDefault();">
+        <div>
+            Name: <input type="text" id="name" />
+            <br>
+            Address: <input type="text" id="address" />
+            <br>
+            <input type="submit" value="Add" id="submit"/>
+        </div>
+        </form>
+
+        <div id="error"></div>
+    </body>
+</html>
